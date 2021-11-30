@@ -1,0 +1,74 @@
+<!-- Модальне вікно -->
+<div class="modal fade" id="modal_ships" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark">
+
+      <!-- Заголовок модального вікна -->
+      <div class="modal-header border-secondary">
+        <div class="d-flex flex-column">
+          <span class="fs-3 lh-1" id="ship_title">#Title</span>
+        </div>
+        <button type="button" class="btn-close bg-primary" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Тіло модального вікна -->
+      <div class="modal-body">
+        <form>
+
+          <!-- ім’я -->
+          <span class="fs-5">Назва корабля</span>
+          <input class="form-control fs-5 bg-dark text-light border-primary mb-2" id="ship_name" type="text"
+            placeholder="Назва">
+
+          <span class="fs-5">Країна</span>
+          <input class="form-control fs-5 bg-dark text-light border-primary mb-2" id="ship_country" type="text"
+            placeholder="Країна">
+
+          <div class="row gx-3 mb-2">
+            <div class="col-12 col-sm-2">
+
+              <!-- Тоннаж -->
+              <span class="fs-5">Тоннаж</span>
+              <input class="form-control fs-5 bg-dark text-light border-primary" id="ship_tonnage" type="number"
+                placeholder="Тоннаж" oninput = " set_age(this)">
+            </div>
+
+            <div class="col-12 mb-2 d-block d-sm-none"></div>
+            <div class="col-12 col-sm-10">
+
+              <!-- Пристань -->
+              <span class="fs-5">Пристань</span>
+              <div class="dropdown">
+                <button class="btn btn-outline-primary fs-5 w-100 dropdown-toggle" type="button" id="ship_pier"
+                  data-bs-toggle="dropdown" aria-expanded="false">Виберіть пристань</button>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="ship_pier" id="ship_piers_list">
+                  <li><span class="dropdown-item" onclick="set_pier(this)">. . .</span></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Порт -->
+          <span class="fs-5">Порт</span>
+          <div class="dropdown">
+            <button class="btn btn-outline-primary fs-5 w-100 dropdown-toggle" type="button" id="ship_port"
+              data-bs-toggle="dropdown" aria-expanded="false">Виберіть порт</button>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="ship_port" id="ship_ports_list">
+              <li><span class="dropdown-item" onclick="set_port(this)">. . .</span></li>
+            </ul>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Кнопки модального вікна -->
+      <div class="modal-footer border-secondary">
+        <button class="btn btn-outline-primary" id="ship_yes" data-bs-dismiss="modal"
+          onclick="modal_add_ships()">#Yes</button>
+        <button class="btn btn-outline-secondary" id="ship_no" data-bs-dismiss="modal">Відміна</button>
+      </div>
+    </div>
+  </div>
+</div>
