@@ -1,0 +1,24 @@
+#table table {
+	border: 1px solid black;
+	width: 50%;
+	margin-top: 1%;
+	margin-left: 25%;
+	margin-right: 25%;
+	border-collapse: collapse;
+	background-color: #262b60;
+}
+#table th,td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+#table table thead tr th {
+	scope: col;
+}
+body{
+	background: linear-gradient(#34143b, black) no-repeat;
+	background-color: #34143b;
+	color: #ff0ff1;
+}
+html, body {
+  height: 100%;
+}

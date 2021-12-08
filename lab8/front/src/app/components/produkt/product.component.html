@@ -1,0 +1,15 @@
+<app-customer-add (changed)="getCustomers()">
+
+</app-customer-add>
+<h2>Продукти</h2>
+
+<ul class="customers">
+  <li *ngFor="let customer of customers" [class.selected]="customer === selectedCustomer" (click)="onSelect(customer)">
+    <span class="badge">id продукту {{customer.id}}</span>назва продукту {{customer.name}} ціна продукту {{customer.budget}} грн.
+    
+  </li>
+</ul>
+
+<app-customer-details [customer]="selectedCustomer" (changed)="getCustomers()">
+
+</app-customer-details>
